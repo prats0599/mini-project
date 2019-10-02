@@ -5,8 +5,9 @@
     #ep{
       font-size: 19px;
       font-weight: bold;
-
     }
+
+
 
     </style>
       <script>
@@ -20,10 +21,20 @@
              document.getElementById("ep").innerHTML="ALL FIELD REQUIRED";
              return false;
            }else{
-             return true;
+             return myFunction();
            }
          }
        </script>
+
+
+     <script>
+        function myFunction()
+        {
+        var inputVal = document.getElementById("name").value;
+        alert("Thank you for contacting "+inputVal+" We will get back to you shortly");
+        }
+      </script>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Victory - Contact page</title>
@@ -39,19 +50,17 @@
 <body>
   <div class="header">
       <div class="container">
-          <a href="index.html" class="navbar-brand scroll-top">Mumbai Airport</a>
-      </div>
-  </div>
+          <div>
+              <ul class="nav1">
+                  <li style="float:left"><a href="index.php">Mumbai Airport</a></li>
+                  <li><a href="http://indiaairport.com/airports/mumbai/parking.htm">Car Parking</a></li>
+                  <li><a href="contact.php">Contact Us</a></li>
+                  <li><a href="flight.php">Check Flight Status</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  </ul>
+          </div>
 
-  <div class="container">
-    <div>
-        <ul class="nav1">
-            <li class="tabs"><a href="index.html">Home</a></li>
-            <li class="tabs"><a href="#">Check Flight Status</a></li>
-            <li class="tabs"><a href="contact.html">Contact Us</a></li>
-            <li class="tabs"><a href="http://indiaairport.com/airports/mumbai/parking.htm">Car Parking</a></li>
-        </ul>
-    </div>
+      </div>
   </div>
 
   <section class="banner">
@@ -74,7 +83,7 @@
                     <div class="section-heading">
                         <h2>Message</h2>
                     </div>
-                    <form id="contact" action="contact.html" method="post" onsubmit="return validation()">
+                    <form id="contact" action="contact.php" method="post"onsubmit="return validation()">
                         <div class="row">
                             <div class="col-md-6">
                                 <fieldset>
@@ -83,11 +92,11 @@
                                 </fieldset>
                                 <fieldset>
                                   <label>Email</label>&nbsp;<span id="ep"></span>
-                                    <input name="email" type="text" class="form-control" id="email" placeholder="Your email...">
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required>
                                 </fieldset>
                                 <fieldset>
                                   <label>Phone</label>&nbsp;<span id="ep"></span>
-                                    <input name="phone" type="text" class="form-control" id="phone" placeholder="Your phone...">
+                                    <input name="phone" type="tel" class="form-control" id="phone" placeholder="Your phone..."pattern="[0-9]{10}"required >
                                 </fieldset>
                             </div>
                             <div class="col-md-6">
@@ -102,10 +111,12 @@
                         </div>
                     </form>
                 </div>
+
+                <br>
                 <div class="col-md-6">
                     <div class="section-heading contact-info">
                         <h2>Contact Info</h2>
-                        <p>Vidyalankar Educational Campus, Vidyalankar College Road, Wadala (East),<br><br><em>Mumbai, <br>Maharashtra 400037</em></p>
+                        <p>Terminal 2 Navpada, Vile Parle East, Vile Parle, Mumbai, Maharashtra 400099<br><em>Mumbai, <br>Maharashtra 400099</em></p>
                     </div>
                 </div>
             </div>
@@ -119,12 +130,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="map">
-        <!-- How to change your own map point
-            1. Go to Google Maps
-            2. Click on your location point
-            3. Click "Share" and choose "Embed map" tab
-            4. Copy only URL and paste it within the src="" field below
-        -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.232871645443!2d72.87231301490152!3d19.097437287075564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c842b68282f1%3A0x200d8c72871da4f1!2sTerminal%202%2C%20Navpada%2C%20Vile%20Parle%20East%2C%20Vile%20Parle%2C%20Mumbai%2C%20Maharashtra%20400099!5e0!3m2!1sen!2sin!4v1569653009253!5m2!1sen!2sin" width="1350" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
                 </div>
             </div>

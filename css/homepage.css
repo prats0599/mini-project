@@ -19,25 +19,27 @@ p {
 	font-size: 13px;
 	line-height: 24px;
 }
-ul.nav1 {
+.nav1 ul {
   list-style-type: none;
-  margin: 10;
-  padding: 10;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: #eaf0ff;
-  float: center;
+  background-color: #333;
 }
-li a {
-  display: block;
-  color: black;
+
+.nav1 li {
+  float: right;
+}
+
+.nav1 li a {
+  display: flex;
+  color: #002966;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: #eaf0ff;
-}
+
 
 .row {
   margin-right: 45px;
@@ -53,8 +55,8 @@ li a:hover {
 
 }
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -65,15 +67,16 @@ li a:hover {
     padding: 0;
     z-index: 10000;
     transition: all 0.2s ease-in-out;
-    background-color: #eaf0ff;
+    background-color: #ffcc00;
     text-align: center;
 }
 
 .navbar-brand {
-	font-family: 'Spectral', serif;
+	font-family: 'Calibri';
+  font-style: normal;
 	font-size: 44px;
-	color: #121212;
-	text-align: center;
+	color: #003366;
+	text-align: left;
 	width: 100%;
 	border-bottom: 1px solid #d8deed;
 	position: relative;
@@ -84,12 +87,13 @@ li a:hover {
 
 /*Banner Details*/
 .banner {
-	padding: 180px 0px;
+	padding: 230px 0px;
 	background-image: url(../img/slider2.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	text-align: center;
+  border-bottom: 5px solid #d8deed;
 }
 
 .banner h4 {
@@ -106,7 +110,7 @@ li a:hover {
 	font-family: 'Spectral', serif;
 	font-size: 44px;
 	font-weight: 600;
-	color: #fff;
+	color: #80ffff;
 	text-transform: uppercase;
 }
 
@@ -195,10 +199,10 @@ li a:hover {
 
 .col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12
 {
-  position:relative;
-  min-height:1px;
-  padding-right:10px;
-  padding-left:10px
+  position: relative;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /*Form css*/
 
@@ -206,12 +210,14 @@ li a:hover {
 
 
 section#book-table {
-	padding: 30px 0px;
+	padding: 100px ;
+  padding-top: -50px;
 	background-image: url(../img/flight1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	text-align: center;
+  border-bottom: 5px solid #d8deed;
 }
 
 #book-table .heading h2 {
@@ -370,6 +376,27 @@ section#book-table .left-image img {
   width: 100%;
 }
 
+.fh5co-bg-color{
+  background-color: #e6e6e6;
+}
+
+.row1 {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.heading{
+  text-align: center;
+  font-family: 'Calibri',monospace;
+}
+
+.container1 {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .feature-full-1col {
   display: -webkit-box;
   display: -moz-box;
@@ -381,8 +408,8 @@ section#book-table .left-image img {
   margin-bottom: 30px;
 }
 .feature-full-1col .image, .feature-full-1col .desc {
-  float: left;
-  width: 20%;
+  float: center;
+  width: 25%;
 }
 @media screen and (max-width: 768px) {
   .feature-full-1col .image, .feature-full-1col .desc {
@@ -399,11 +426,11 @@ section#book-table .left-image img {
   overflow: hidden;
 }
 .feature-full-1col .image .descrip {
-  width: 280px;
+  width: 180px;
   position: absolute;
   top: 0;
   right: -180px;
-  padding: 50px;
+  padding: 10px;
   background: #FF5722;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
@@ -427,12 +454,12 @@ section#book-table .left-image img {
   }
 }
 .feature-full-1col .desc {
-  padding: 100px;
+  padding: 20px;
   background: #fff;
 }
 @media screen and (max-width: 768px) {
   .feature-full-1col .desc {
-    padding: 100px;
+    padding: 30px;
   }
 }
 .feature-full-1col:hover .image .descrip, .feature-full-1col:focus .image .descrip {
@@ -525,6 +552,7 @@ section#book-table .left-image img {
 .feature-full-2col .f-hotel:hover .image .descrip, .feature-full-2col .f-hotel:focus .image .descrip {
   right: 0;
 }
+
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;

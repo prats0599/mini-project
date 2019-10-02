@@ -6,7 +6,6 @@
         <title>Mumbai Airport</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
        <link rel="stylesheet" href="css/homepage.css">
       <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
@@ -15,24 +14,19 @@
 <body>
     <div class="header">
         <div class="container">
-            <a href="index.html" class="navbar-brand scroll-top">Mumbai Airport</a>
+            <div>
+                <ul class="nav1">
+                    <li style="float:left"><a href="index.php">Mumbai Airport</a></li>
+                    <li><a href="http://indiaairport.com/airports/mumbai/parking.htm">Car Parking</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="flight.php">Check Flight Status</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    </ul>
+            </div>
 
         </div>
-        <!--/.container-->
     </div>
-    <!--/.header-->
-    <div class="container">
-      <div>
-          <ul class="nav1">
-              <li class="tabs"><a href="index.html">Home</a></li>
-              <li class="tabs"><a href="flight.html">Check Flight Status</a></li>
-              <li class="tabs"><a href="contact.html">Contact Us</a></li>
-              <li class="tabs"><a href="http://indiaairport.com/airports/mumbai/parking.htm">Car Parking</a></li>
-          </ul>
-      </div>
-    </div>
-
-   <section class="banner">
+    <section class="banner">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
@@ -43,166 +37,13 @@
         </div>
     </section>
 
-    <section id="book-table">
-        <div class="form-container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-2 col-sm-12">
-                    <div class="left-info">
-                      <h4>Arrivals</h4>
-                      <form id="form-submit" action="" method="get">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <fieldset>
-                                      <select required name='day' onchange='this.form.()'>
-                                          <option value="">Select Terminal</option>
-                                          <option value="Monday">Terminal 1</option>
-                                          <option value="Tuesday">Terminal 2</option>
-
-                                      </select>
-                                  </fieldset>
-                              </div>
-                              <div class="col-md-6">
-                                  <fieldset>
-                                      <select required name='hour' onchange='this.form.()'>
-                                          <option value="">Select Airline</option>
-                                          <option value="10-00">Jet Airways</option>
-                                          <option value="12-00">Air India</option>
-                                          <option value="14-00">Spice Jet</option>
-                                          <option value="16-00">Indigo </option>
-                                          <option value="18-00">Go Air</option>
-                                          <option value="20-00">Vistara</option>
-                                          <option value="22-00">Emirates</option>
-                                      </select>
-                                  </fieldset>
-                              </div>
-                              <div class="col-md-6">
-                                  <fieldset>
-                                    <select required name='hour' onchange='this.form.()'>
-                                        <option value="">Select Airline Number</option>
-                                        <option value="10-00">013f</option>
-                                        <option value="12-00">013f1</option>
-                                        <option value="14-00">013f2</option>
-                                        <option value="16-00">013f3</option>
-                                        <option value="18-00">013f4</option>
-                                        <option value="20-00">013f5</option>
-                                        <option value="22-00">013f6</option>
-                                    </select>
-                                  </fieldset>
-                              </div>
-                              <div class="col-md-6">
-                                  <fieldset>
-                                    <select required name='hour' onchange='this.form.()'>
-                                        <option value="">Origin</option>
-                                        <option value="10-00">India</option>
-                                        <option value="12-00">Pakistan</option>
-                                        <option value="14-00">Indonesia</option>
-                                        <option value="16-00">Pakistan</option>
-                                        <option value="18-00">USA</option>
-                                        <option value="20-00">UK</option>
-                                        <option value="22-00">Russia</option>
-                                    </select></fieldset>
-                              </div>
-                              <div class="col-md-6">
-                                  <fieldset>
-                                      <select required class="person" name='persons' onchange='this.form.()'>
-                                          <option value="">Date of Arrival</option>
-                                          <option value="1-Person">today</option>
-                                          <option value="2-Persons">Yesterday</option>
-                                      </select>
-                                  </fieldset>
-                              </div>
-                              <div class="col-md-6">
-                                  <fieldset>
-                                      <button type="submit" id="form-submit" class="btn">Check Status</button>
-                                  </fieldset>
-                              </div>
-                          </div>
-                      </form>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="right-info">
-                        <h4>Departures</h4>
-                        <form id="form-submit" action="" method="get">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <select required name='day' onchange='this.form.()'>
-                                            <option value="">Select Terminal</option>
-                                            <option value="Monday">Terminal 1</option>
-                                            <option value="Tuesday">Terminal 2</option>
-                                        </select>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <select required name='hour' onchange='this.form.()'>
-                                            <option value="">Select Airline</option>
-                                            <option value="10-00">Jet Airways</option>
-                                            <option value="12-00">Air India</option>
-                                            <option value="14-00">Spice Jet</option>
-                                            <option value="16-00">Indigo </option>
-                                            <option value="18-00">Go Air</option>
-                                            <option value="20-00">Vistara</option>
-                                            <option value="22-00">Emirates</option>
-                                        </select>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                    <fieldset>
-                                      <select required name='hour' onchange='this.form.()'>
-                                          <option value="">Select Airline Number</option>
-                                          <option value="10-00">013f</option>
-                                          <option value="12-00">013f1</option>
-                                          <option value="14-00">013f2</option>
-                                          <option value="16-00">013f3</option>
-                                          <option value="18-00">013f4</option>
-                                          <option value="20-00">013f5</option>
-                                          <option value="22-00">013f6</option>
-                                      </select>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                    <fieldset>
-                                      <select required name='hour' onchange='this.form.()'>
-                                          <option value="">Origin</option>
-                                          <option value="10-00">India</option>
-                                          <option value="12-00">Pakistan</option>
-                                          <option value="14-00">Indonesia</option>
-                                          <option value="16-00">Pakistan</option>
-                                          <option value="18-00">USA</option>
-                                          <option value="20-00">UK</option>
-                                          <option value="22-00">Russia</option>
-                                      </select></fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <select required class="person" name='persons' onchange='this.form.()'>
-                                            <option value="">Date of Departure</option>
-                                            <option value="1-Person">today</option>
-                                            <option value="2-Persons">Yesterday</option>
-                                        </select>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <button type="submit" a href="flight.html" id="form-submit" class="btn">Check Status</a></button>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 <section>
   <div id="featured-hotel" class="fh5co-bg-color">
-    <div class="container">
-      <div class="row">
+    <div class="container1">
+      <div class="row1">
         <div class="col-md-12">
-          <div class="section-title text-center">
+          <div class="heading">
             <h2>Hotels Near the Airport</h2>
           </div>
         </div>
@@ -305,6 +146,5 @@
             </div>
         </div>
     </section>
-
 </body>
 </html>
