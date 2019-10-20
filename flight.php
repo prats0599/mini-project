@@ -10,7 +10,28 @@
         <link rel="stylesheet" href="css/homepage.css">
         <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        <style media="screen">
+        table {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
 
+td, th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: white;
+color: #c2bec1;
+}
+        </style>
     </head>
 
 <body>
@@ -40,7 +61,7 @@
        </div>
    </section>
 
-
+  <div class="container">
       <?php
     $servername = "localhost";
     $username = "root";
@@ -56,6 +77,7 @@
 
     $sql = "SELECT * from departures ORDER BY flighttime";
     $result = $conn->query($sql);
+    echo "<br><b> Departures </b><br><br>";
 
     if ($result->num_rows > 0) {
         echo "<table><tr><th>flighttime</th><th>flightid</th><th>Destination</th><th>airline</th><th>Status</th></tr>";
@@ -70,6 +92,7 @@
 
     $sql = "SELECT * from arrivals ORDER BY flighttime";
     $result = $conn->query($sql);
+    echo "<br><b> Arrivals  </b><br><br>";
 
     if ($result->num_rows > 0) {
         echo "<table><tr><th>flighttime</th><th>flightid</th><th>From</th><th>airline</th><th>Status</th></tr>";
@@ -84,7 +107,7 @@
 
     $conn->close();
     ?>
-
+</div>
 
 </body>
 </html>

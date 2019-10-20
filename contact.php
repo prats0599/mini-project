@@ -24,6 +24,21 @@
              return myFunction();
            }
          }
+         var data = {"name":name,"email":email,"phone":phone,"message":message};
+         var formdata = new FormData();
+         formdata.append('values',JSON.stringify(data));
+         var request= ajax_call("POST","contact.php",formdata);
+         request.done(function(msg){
+           msg=JSON.parse(msg);
+           if(msg.present){
+             alert(msg.status);
+           }
+           else{
+             alert("booked successfully");
+             window.location="landing";
+           }
+         });
+
        </script>
 
 
@@ -37,7 +52,7 @@
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Victory - Contact page</title>
+        <title>Mumbai Airport</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -83,7 +98,7 @@
                     <div class="section-heading">
                         <h2>Message</h2>
                     </div>
-                    <form id="contact" action="contact.php" method="post"onsubmit="return validation()">
+                    <form id="contact" action="insert.php" method="post" onsubmit="return validation()">
                         <div class="row">
                             <div class="col-md-6">
                                 <fieldset>
